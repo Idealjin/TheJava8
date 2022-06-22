@@ -2,7 +2,7 @@ package java8to11;
 
 import java.util.function.*;
 
-public class Function {
+public class Foo {
 
 
     public static void main(String[] args) {
@@ -19,7 +19,7 @@ public class Function {
         UnaryOperator<Integer> plus10 = (i) -> i + 10;
         System.out.println(plus10.apply(2));
 
-        Function foo = new Function();
+        Foo foo = new Foo();
         foo.run();
 
 
