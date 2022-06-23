@@ -2,13 +2,19 @@ package java8to11;
 
 import java.util.function.*;
 
-public class Foo {
+public class App {
 
 
     public static void main(String[] args) {
 
+        Function<Integer, Integer> add1 = (i) -> i+1;
+
+
         Consumer<Integer> printT = (i) -> System.out.println(i);
+
+
         Supplier<Integer> get10 = () -> 10;
+
         //body가 한줄이면 생략가능 {}
         //        Supplier<Integer> get10 = () -> {
         //        return 10};
@@ -19,7 +25,7 @@ public class Foo {
         UnaryOperator<Integer> plus10 = (i) -> i + 10;
         System.out.println(plus10.apply(2));
 
-        Foo foo = new Foo();
+        App foo = new App();
         foo.run();
 
 
