@@ -43,8 +43,5 @@ public class App7 {
         Comparator<String> compareToIgnoreCase = String::compareToIgnoreCase;
         name.sort(compareToIgnoreCase.reversed());
         name.forEach(System.out::println);
-
-
-
     }
 }
