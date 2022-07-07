@@ -1,8 +1,11 @@
 package java8to11;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class StreamApp2 {
     public static void main(String[] args) {
@@ -44,11 +47,26 @@ public class StreamApp2 {
         keesunEvents.add(javaClasses);
 
         System.out.println("두 수업 목록에 잇는 모든 수업아이디 출력");
+        keesunEvents.stream()
+                .flatMap(Collection::stream)
+                .forEach(oc -> System.out.println(oc.getId()));
 
         System.out.println("10부터 1씩 증가하는 무제한 스트림 중에서 앞에 10개 뺴고 최대 10개 까지만");
+        Stream.iterate(10, i -> i+1)
+                .skip(10)
+                .limit(10)
+                .forEach(System.out::println);
 
         System.out.println("자바 수업 중에 Test가 들어잇는 수업이 잇는지 확인");
+        boolean test = javaClasses.stream().anyMatch(oc -> oc.getTitle().contains("Test"));
+        System.out.println(test);
 
+        System.out.println("스프링 수업 중에 제목에 spring이 들어간 제목만 모아서 list로 만들기");
+       List<String> spring = springClasses.stream()
+                .map(OnlineClass::getTitle)
+                .filter(t -> t.contains("spring"))
+                .collect(Collectors.toList());
+        spring.forEach(System.out::println);
 
     }
 }
