@@ -1,5 +1,8 @@
 package java8to11;
 
+import javax.swing.text.html.Option;
+import java.util.Optional;
+
 public class OnlineClass {
 
     private Integer id;
@@ -42,5 +45,7 @@ public class OnlineClass {
         return closed;
     }
 
-    public Progress getProgress() {return progress;}
+    public Optional<Progress> getProgress(){
+        return Optional.ofNullable(progress);       //optional은 리턴에서만 쓰는것을 권장
+    }
 }
