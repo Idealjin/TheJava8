@@ -15,7 +15,7 @@ public class App {
 
         Supplier<Integer> get10 = () -> 10;
 
-        //body가 한줄이면 생략가능 {}
+        // body가 한줄이면 생략가능 {}
         //        Supplier<Integer> get10 = () -> {
         //        return 10};
         System.out.println(get10.get());
