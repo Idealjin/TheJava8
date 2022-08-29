@@ -30,7 +30,7 @@ public class optional2 {
         }
 
         // -> 이렇게 사용하는 것을 권장
-        optional.ifPresent(oc ->{
+        optional.ifPresent(oc -> {
             System.out.println("ifPresent = " + oc.getTitle());
         });
 
@@ -65,7 +65,10 @@ public class optional2 {
         //Stream에서의 flatMap과는 다르다.
         //Stream에서의 flatMap은 1대1 맵핑이다.
 
+
+
     }
+
 
     private static OnlineClass createNewClasses() {
         System.out.println("creating new online class");
