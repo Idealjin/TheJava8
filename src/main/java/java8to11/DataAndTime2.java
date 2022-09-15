@@ -35,7 +35,7 @@ public class DataAndTime2 {
         //기간 - Period,Duration
         LocalDate today = LocalDate.now();
         LocalDate thisYearBirthDay = LocalDate.of(2022, Month.OCTOBER, 22);
-        //왜 8이 나오지? -> 출력할때 days로 출력해서 그런듯
+        //왜 8이 나오지? -> 출력할때 days로 출력해서 그런듯 -> 맞음
         System.out.println(today + "today");
         System.out.println(thisYearBirthDay + "thisYearBirthDay");
 
