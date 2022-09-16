@@ -36,6 +36,8 @@ public class DataAndTime2 {
         LocalDate today = LocalDate.now();
         LocalDate thisYearBirthDay = LocalDate.of(2022, Month.OCTOBER, 22);
         //왜 8이 나오지? -> 출력할때 days로 출력해서 그런듯 -> 맞음
+        //Dto에서 LocalDate로 데이터를 받을떄는 @DateTimeFormat(pattern = "yyyy-MM-dd") 를 이용하면된다.
+
         System.out.println(today + "today");
         System.out.println(thisYearBirthDay + "thisYearBirthDay");
 
